@@ -1,0 +1,19 @@
+# Render Blueprint — New + → Blueprint → pick this repo.
+# Free plan, Frankfurt: an EU region so Binance's public market-data and
+# funding endpoints (which block US-hosted servers) stay reachable.
+services:
+  - type: web
+    name: aetherquant
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/ping
+    autoDeploy: true
+    envVars:
+      # set in the Render dashboard (never committed): free key from
+      # console.groq.com — enables real LLM chat with tool-calling
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile

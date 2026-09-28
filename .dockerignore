@@ -1,0 +1,9 @@
+**/node_modules
+**/__pycache__
+**/.cache
+**/dist
+.git
+.claude
+*.log
+.env
+.env.*

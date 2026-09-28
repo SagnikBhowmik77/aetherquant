@@ -1,0 +1,8 @@
+services:
+  aetherquant:
+    build: .
+    ports:
+      - "8700:8700"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped

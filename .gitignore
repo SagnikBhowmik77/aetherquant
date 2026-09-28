@@ -1,0 +1,16 @@
+# dependencies / build output
+node_modules/
+dist/
+__pycache__/
+*.pyc
+
+# runtime caches (DuckDB market cache, paper-trading + memory stores)
+.cache/
+*.duckdb
+*.duckdb.wal
+
+# local-only config and secrets
+.claude/
+.env
+.env.*
+*.log
